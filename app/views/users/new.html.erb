@@ -1,10 +1,25 @@
-<%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
-  <input name=name>
-  <input name=password>
-  <label>How are you feeling on a ?</label>
-  <input name=nausea> 
-  <input name=happiness> 
-  <input name=tickets> 
-  <input name=height> 
-  <input type=submit value='signup'>
+<h1>Signup</h1><br>
+
+<%= form_for @user do|f| %>
+<%=f.label :name%>
+<%=f.text_field :name%><br>
+<%=f.label :password%>
+<%=f.text_field :password%><br><br>
+
+how your feeling ? <br>
+<%=f.label :nausea%>
+<%=f.text_field :nausea%><br>
+<%=f.label :happiness%>
+<%=f.text_field :happiness%><br><br>
+
+
+How many tickets do you need?<br>
+<%=f.label :tickets%>
+<%=f.text_field :tickets%><br><br>
+
+What is your height? <br>
+<%=f.label :height%>
+<%=f.text_field :height%>
+  
+<%=f.submit "Create User"%>
 <% end %>
