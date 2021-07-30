@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.integer :tickets
       t.integer :height
       t.string :password_digest
-      t.string :admin
+      t.boolean :admin
 
 
       t.timestamps
