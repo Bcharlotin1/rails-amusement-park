@@ -10,12 +10,12 @@ def show
 end
 
 def create
-
+# byebug
     # if params[:user][:password] == params[:user][:password_confirmation]
-        @user = User.create(user_params)
-        if  @user.save
+        # @user = User.create(user_params)
+        if @user = User.create(user_params)
         session[:user_id] = @user.id
-        redirect_to user_path(@user.id)
+        redirect_to user_path(@user)
         else
             render :new
         end

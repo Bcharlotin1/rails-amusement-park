@@ -1,2 +1,16 @@
 
-Hello <%= @user.name%>
+<h1>Hi, <%= @user.name%>.</h1>
+
+
+
+<h2>Mood: happy</h2>
+
+<h2><%=@user.happiness%></h2>
+<h2><%=@user.tickets%></h2>
+<h2><%=@user.height%></h2>
+
+
+
+<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <input type=submit value='logout'>
+<% end %>

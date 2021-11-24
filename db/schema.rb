@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_07_29_210348) do
     t.integer "tickets"
     t.integer "height"
     t.string "password_digest"
-    t.string "admin"
+    t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
